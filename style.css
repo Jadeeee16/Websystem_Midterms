@@ -330,16 +330,15 @@ body {
 /* ==================== CARD_HEART.HTML ==================== */
 .heart-page {
   background: url('./images/BG_heart.jpg') no-repeat center center;
-  background-size: cover;  /* Ensures the image covers the full screen */
-  background-attachment: fixed;  /* Keeps the background fixed when scrolling */
-  height: 100vh;  /* Makes sure the height is 100% of the viewport */
-  width: 100%;  /* Ensures the width covers the full screen */
-  margin: 0;  /* Remove any default margin */
-  padding: 0;  /* Remove any default padding */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #212529;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 
@@ -397,6 +396,4 @@ body {
   color: #ddd;
   line-height: 1.6;
 }
-
-
   
