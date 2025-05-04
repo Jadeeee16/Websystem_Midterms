@@ -5,23 +5,17 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-color: #000; /* fallback if image doesn't load */
+    background-color: #000; /* Incase no image, ito ang background */
+    overflow: hidden; /* To disale scroll */
   }
 
-body {
+  body {
     margin: 0;
     padding: 0;
-    background-color: #000000;
-    color: #ffffff;
     font-family: 'Orbitron', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    text-align: center;
+    color: #ffffff;
+    background-color: #000000;
     transition: opacity 0.8s ease;
-    overflow: hidden;
   }
 
   .fade-out {
@@ -86,6 +80,22 @@ body {
 
 
   /* ==================== 2_MAIN.HTML ==================== */
+  .navbar {
+    background-color: #000; /* pure black */
+    box-shadow: 0 0 20px white;
+    height: 100px;
+  }
+  
+  .navbar-brand, .nav-link {
+    color: white;
+    /* text-shadow: 0 0 10px #ff0000; */
+  }
+  
+  .nav-link:hover {
+    color: #00ffff !important;
+    text-shadow: 0 0 15px #00ffff;
+  }
+  
   .main-page {
     background: url('./images/main.jpeg') no-repeat center center;
     background-size: cover;  /* Ensures the image covers the full screen */
@@ -98,6 +108,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    inset: 0;
   }
   
   /* Title Styling */
@@ -269,22 +281,51 @@ body {
 }
 
 
-/* ==================== CARD_DIAMONG.HTML ==================== */
+/* ==================== CARD_DIAMOND.HTML ==================== */
 .diamond-page {
   background: url('./images/BG_diamond.png') no-repeat center center;
-  background-size: cover;  /* Ensures the image covers the full screen */
-  background-attachment: fixed;  /* Keeps the background fixed when scrolling */
-  height: 100vh;  /* Makes sure the height is 100% of the viewport */
-  width: 100%;  /* Ensures the width covers the full screen */
-  margin: 0;  /* Remove any default margin */
-  padding: 0;  /* Remove any default padding */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #212529;
+  font-family: 'Segoe UI', sans-serif;
 }
 
+.info-section {
+    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+    color: #f1f1f1; /* light text */
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    margin: 40px auto;
+    border-radius: 12px;
+    max-width: 1200px;
+}
 
+.info-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px dashed #aaa;
+    padding-bottom: 10px;
+}
+
+.info-images img {
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    border: 2px solid #444;
+}
+
+.info-description {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1rem;
+    color: #ccc;
+}
 
 /* ==================== CARD_HEART.HTML ==================== */
 .heart-page {
@@ -317,4 +358,45 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+.spade-box {
+  background-color: rgba(0, 0, 0, 0.65); /* Semi-transparent dark box */
+  padding: 30px;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  color: #f1f1f1;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.spade-image {
+  border-radius: 8px;
+  max-height: 250px;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.spade-list {
+  list-style: disc;
+  padding-left: 20px;
+  color: #ccc;
+}
+
+.spade-list li {
+  margin-bottom: 8px;
+}
+
+.spade-title {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  border-bottom: 2px dashed #ccc;
+  padding-bottom: 8px;
+}
+
+.spade-description {
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+
   
