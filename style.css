@@ -204,6 +204,20 @@
     display: block; /* Optional: use block for images */
   }
 
+  @media (max-width: 770px) {
+    .flip-card {
+      width: 150px;
+      height: 225px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .flip-card {
+      width: 120px;
+      height: 180px;
+    }
+  }
+
 
 
 /* ==================== CARD_CLUB.HTML ==================== */
